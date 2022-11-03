@@ -1,2 +1,4 @@
-bu birinci data
+ bu birinci data
+ bu ikinci data
+
 
