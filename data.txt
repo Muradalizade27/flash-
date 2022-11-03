@@ -2,38 +2,3 @@
  bu ikinci data
 
 
-(defvar common-lisp-hyperspec-symbol-table nil
-  "The HyperSpec symbol table file.
-If you copy the HyperSpec to your local system, set this variable to
-the location of the symbol table which is usually \"Map_Sym.txt\"
-or \"Symbol-Table.text\".")
-
-(defvar common-lisp-hyperspec-history nil
-  "History of symbols looked up in the Common Lisp HyperSpec.")
-
-(defvar common-lisp-hyperspec--symbols (make-hash-table :test 'equal)
-  "Map a symbol name to its list of relative URLs.")
-
-;; Lookup NAME in 'common-lisp-hyperspec--symbols´
-(defun common-lisp-hyperspec--find (name)
-  "Get the relative url of a Common Lisp symbol NAME."
-  (gethash name common-lisp-hyperspec--symbols))
-
-(defun common-lisp-hyperspec--insert (name relative-url)
-  "Insert CL symbol NAME and RELATIVE-URL into master table."
-  (cl-pushnew relative-url
-	      (gethash name common-lisp-hyperspec--symbols)
-	      :test #'equal))
-
-(defun common-lisp-hyperspec--strip-cl-package (name)
-  (if (string-match "^\\([^:]*\\)::?\\([^:]*\\)$" name)
-      (let ((package-name (match-string 1 name))
-	    (symbol-name (match-string 2 name)))
-	(if (member (downcase package-name)
-		    '("cl" "common-lisp"))
-	    symbol-name
-	  name))
-    name))
-
-
-
