@@ -1,0 +1,76 @@
+.row .nav nav ul  {
+    display: flex;
+    
+}
+.row .nav nav ul li{
+    list-style: none;
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+    font-size: 25px;
+   
+}
+.row .nav nav {
+    
+}
+.row .nav{
+
+display: flex;
+    justify-content: end;
+}
+.header{
+    height: 100vh ;
+    width: 100%;
+    background-size: cover;
+    background-image: url(https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg);
+}
+.container{
+   padding-top: 40px;
+}
+.text{
+    color: white;
+
+}
+
+.row .text h4{
+    font-size: 60px;
+}
+.row .text h1{
+    font-size: 100px;
+}
+.row .text a{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+   margin-top: 30px;
+}
+.icon-text-1 .icon-1{
+    background-color: gold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-text-2 .icon-1{
+    background-color: gold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-text-3 .icon-1{
+    background-color: gold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.feature .row{
+
+}
